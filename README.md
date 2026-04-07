@@ -7,3 +7,4 @@ Columna izquierda (073F:0200, 073F:0210...) Es la dirección de memoria en forma
 Columna central (valores hex como AB CD EF...) Son los datos almacenados en memoria representados en hexadecimal. Cada par de caracteres es un byte, y se muestran 16 bytes por fila separados en dos grupos de 8 para facilitar la lectura.
 Columna derecha (puntos ............) Es la representación ASCII de esos mismos bytes. Cuando un byte no corresponde a un carácter imprimible (como AB, CD, EF), se muestra un punto "." en su lugar.
 C3:
+Se ensambló un programa de 4 instrucciones directamente en CS:0100 con el comando A, y se verificó su correcta codificación con el comando U. La salida del comando U confirmó la correspondencia entre mnemónicos y bytes de código máquina: MOV AX,0005 se codificó como B8 05 00, MOV BX,0003 como BB 03 00, ADD AX,BX como 03 C3, e INT 20 como CD 20. El programa completo ocupó 10 bytes en memoria.
